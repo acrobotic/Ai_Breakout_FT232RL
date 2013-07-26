@@ -854,7 +854,7 @@ Standard 8.5x11 US Letter frame</description>
 </instance>
 <instance part="5V" gate="1" x="111.76" y="142.24"/>
 <instance part="3V3" gate="1" x="101.6" y="142.24"/>
-<instance part="USB1" gate="G$1" x="62.23" y="139.7" rot="R180"/>
+<instance part="USB1" gate="G$1" x="62.23" y="135.89" rot="R180"/>
 <instance part="JP1" gate="M06X1" x="99.06" y="71.12" rot="R180"/>
 <instance part="U$1" gate="G$1" x="165.1" y="71.12" rot="R180"/>
 <instance part="5V2" gate="1" x="175.26" y="142.24"/>
@@ -907,7 +907,7 @@ Standard 8.5x11 US Letter frame</description>
 <pinref part="JP1" gate="M06X1" pin="1"/>
 </segment>
 <segment>
-<wire x1="68.58" y1="143.51" x2="71.12" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="139.7" x2="71.12" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="139.7" x2="71.12" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="104.14" x2="81.28" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="104.14" x2="91.44" y2="104.14" width="0.1524" layer="91"/>
@@ -953,14 +953,14 @@ Standard 8.5x11 US Letter frame</description>
 </net>
 <net name="N$3" class="0">
 <segment>
-<wire x1="68.58" y1="138.43" x2="121.92" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="134.62" x2="121.92" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="USB1" gate="G$1" pin="D-"/>
 <pinref part="U$2" gate="G$1" pin="USBDM"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
-<wire x1="68.58" y1="135.89" x2="121.92" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="132.08" x2="121.92" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="USB1" gate="G$1" pin="D+"/>
 <pinref part="U$2" gate="G$1" pin="USBDP"/>
 </segment>
@@ -973,7 +973,7 @@ Standard 8.5x11 US Letter frame</description>
 </segment>
 <segment>
 <wire x1="111.76" y1="137.16" x2="111.76" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="140.97" x2="81.28" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="137.16" x2="81.28" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="121.92" x2="81.28" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="137.16" x2="91.44" y2="137.16" width="0.1524" layer="91"/>
 <junction x="81.28" y="137.16"/>
