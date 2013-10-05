@@ -7885,18 +7885,18 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="JP1" library="Ai_Connectors" package="1X06-LONG" value="1X06LONG" x="6.3" y="8.123" smashed="yes" rot="R90"/>
-<element name="JP2" library="Ai_Connectors" package="1X04" value="1X04" x="20" y="1.45" smashed="yes"/>
+<element name="J1" library="Ai_Connectors" package="1X06-LONG" value="1X06LONG" x="6.3" y="8.123" smashed="yes" rot="R90"/>
+<element name="JP1" library="Ai_Connectors" package="1X04" value="1X04-PJ" x="20" y="1.45" smashed="yes"/>
 <element name="C1" library="Ai_Passives" package="CAP-0603" value="0.1uF" x="13.8" y="14.823" smashed="yes" rot="R180">
 <attribute name="NAME" x="12.065" y="13.335" size="0.762" layer="25" font="vector" ratio="15"/>
 </element>
 <element name="C2" library="Ai_Passives" package="CAP-0603" value="0.1uF" x="17.223" y="14.813" smashed="yes" rot="R180">
 <attribute name="NAME" x="18.288" y="13.335" size="0.762" layer="25" font="vector" ratio="15"/>
 </element>
-<element name="R1" library="Ai_Passives" package="RES-0603" value="1K" x="22.55" y="5.5" smashed="yes" rot="R270">
+<element name="R1" library="Ai_Passives" package="RES-0603" value="300" x="22.55" y="5.5" smashed="yes" rot="R270">
 <attribute name="NAME" x="21.844" y="5.08" size="0.762" layer="25" font="vector" ratio="15" rot="R90"/>
 </element>
-<element name="R2" library="Ai_Passives" package="RES-0603" value="125" x="13.255" y="1.32" smashed="yes">
+<element name="R2" library="Ai_Passives" package="RES-0603" value="1K" x="13.255" y="1.32" smashed="yes">
 <attribute name="NAME" x="11.557" y="1.016" size="0.762" layer="25" font="vector" ratio="15" rot="R180"/>
 </element>
 <element name="TXLED" library="Ai_LED" package="LED-0603" value="YELLOW" x="21.4516" y="8.3984" smashed="yes">
@@ -7947,7 +7947,7 @@ design rules under a new name.</description>
 <via x="17.145" y="13.589" extent="1-16" drill="0.508"/>
 <via x="11.049" y="2.159" extent="1-16" drill="0.508"/>
 <via x="19.685" y="6.477" extent="1-16" drill="0.508"/>
-<contactref element="JP1" pad="1"/>
+<contactref element="J1" pad="1"/>
 <wire x1="6.3" y1="1.773" x2="10.663" y2="1.773" width="0.254" layer="16"/>
 <wire x1="10.663" y1="1.773" x2="11.049" y2="2.159" width="0.254" layer="16"/>
 <wire x1="11.049" y1="2.159" x2="11.43" y2="2.54" width="0.254" layer="1"/>
@@ -7988,7 +7988,7 @@ design rules under a new name.</description>
 <wire x1="18.796" y1="10.414" x2="19.304" y2="10.922" width="0.254" layer="1"/>
 </signal>
 <signal name="5V">
-<contactref element="JP2" pad="1"/>
+<contactref element="JP1" pad="1"/>
 <contactref element="C1" pad="1"/>
 <contactref element="R1" pad="2"/>
 <wire x1="22.55" y1="4.65" x2="21.35" y2="4.65" width="0.254" layer="1"/>
@@ -8031,7 +8031,7 @@ design rules under a new name.</description>
 <wire x1="14.605" y1="14.905" x2="14.65" y2="14.823" width="0.254" layer="1"/>
 </signal>
 <signal name="3V3">
-<contactref element="JP2" pad="4"/>
+<contactref element="JP1" pad="4"/>
 <contactref element="C2" pad="1"/>
 <wire x1="24.1532" y1="3.454" x2="24.1532" y2="14.5818" width="0.254" layer="16"/>
 <wire x1="23.81" y1="1.45" x2="23.81" y2="3.06" width="0.254" layer="16"/>
@@ -8060,7 +8060,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="TXO">
 <contactref element="IC1" pad="1"/>
-<contactref element="JP1" pad="4"/>
+<contactref element="J1" pad="4"/>
 <wire x1="6.3" y1="9.393" x2="7.371" y2="9.393" width="0.254" layer="1"/>
 <wire x1="7.371" y1="9.393" x2="10.922" y2="5.715" width="0.254" layer="1"/>
 <wire x1="10.922" y1="5.715" x2="10.922" y2="5.014" width="0.254" layer="1"/>
@@ -8068,7 +8068,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="CTS">
 <contactref element="IC1" pad="11"/>
-<contactref element="JP1" pad="2"/>
+<contactref element="J1" pad="2"/>
 <wire x1="6.3" y1="4.313" x2="7.371" y2="4.313" width="0.254" layer="16"/>
 <wire x1="7.371" y1="4.313" x2="8.509" y2="3.175" width="0.254" layer="16"/>
 <wire x1="8.509" y1="3.175" x2="15.494" y2="3.175" width="0.254" layer="16"/>
@@ -8080,7 +8080,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="RXI">
 <contactref element="IC1" pad="5"/>
-<contactref element="JP1" pad="5"/>
+<contactref element="J1" pad="5"/>
 <via x="13.97" y="6.35" extent="1-16" drill="0.508"/>
 <wire x1="9.017" y1="11.938" x2="6.305" y2="11.938" width="0.254" layer="16"/>
 <wire x1="6.305" y1="11.938" x2="6.3" y2="11.933" width="0.254" layer="16"/>
@@ -8091,7 +8091,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="DTR">
 <contactref element="IC1" pad="2"/>
-<contactref element="JP1" pad="6"/>
+<contactref element="J1" pad="6"/>
 <wire x1="6.3" y1="14.473" x2="7.244" y2="14.473" width="0.254" layer="1"/>
 <wire x1="7.244" y1="14.473" x2="9.5885" y2="12.2555" width="0.254" layer="1"/>
 <wire x1="9.5885" y1="12.2555" x2="9.5885" y2="8.3185" width="0.254" layer="1"/>
@@ -8120,9 +8120,9 @@ design rules under a new name.</description>
 <wire x1="14.859" y1="12.094" x2="14.788" y2="12.165" width="0.254" layer="1"/>
 </signal>
 <signal name="PWR">
+<contactref element="J1" pad="3"/>
 <contactref element="JP1" pad="3"/>
-<contactref element="JP2" pad="3"/>
-<contactref element="JP2" pad="2"/>
+<contactref element="JP1" pad="2"/>
 <contactref element="R2" pad="1"/>
 <via x="17.2008" y="7.2524" extent="1-16" drill="0.508" diameter="0.254"/>
 <wire x1="13.492" y1="7.2524" x2="17.2008" y2="7.2524" width="0.254" layer="1"/>

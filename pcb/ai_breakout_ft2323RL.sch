@@ -397,19 +397,6 @@ Standard 8.5x11 US Letter frame</description>
 <wire x1="5.715" y1="-1.27" x2="5.08" y2="-0.635" width="0.2032" layer="21"/>
 <wire x1="7.62" y1="0.635" x2="7.62" y2="-0.635" width="0.2032" layer="21"/>
 </package>
-<package name="1X04-LONG">
-<wire x1="-5.08" y1="0.635" x2="-5.08" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="5.08" y1="0.635" x2="5.08" y2="-0.635" width="0.2032" layer="21"/>
-<pad name="1" x="-3.81" y="0" drill="1.1176" diameter="1.8796" shape="long" rot="R90"/>
-<pad name="2" x="-1.27" y="0" drill="1.1176" diameter="1.8796" shape="long" rot="R90"/>
-<pad name="3" x="1.27" y="0" drill="1.1176" diameter="1.8796" shape="long" rot="R90"/>
-<pad name="4" x="3.81" y="0" drill="1.1176" diameter="1.8796" shape="long" rot="R90"/>
-<text x="-5.08" y="2.54" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<rectangle x1="3.556" y1="-0.254" x2="4.064" y2="0.254" layer="51"/>
-<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
-<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
-<rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
-</package>
 </packages>
 <symbols>
 <symbol name="1X06">
@@ -425,16 +412,26 @@ Standard 8.5x11 US Letter frame</description>
 <pin name="5" x="5.08" y="2.54" visible="pin" length="short" rot="R180"/>
 <pin name="6" x="5.08" y="5.08" visible="pin" length="short" rot="R180"/>
 </symbol>
-<symbol name="1X04">
-<wire x1="2.54" y1="-7.62" x2="-2.54" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="2.54" y1="-7.62" x2="2.54" y2="5.08" width="0.4064" layer="94"/>
-<wire x1="-2.54" y1="5.08" x2="2.54" y2="5.08" width="0.4064" layer="94"/>
-<text x="-2.54" y="5.715" size="1.524" layer="95" ratio="15">&gt;NAME</text>
-<pin name="1" x="5.08" y="-5.08" length="short" rot="R180"/>
-<pin name="2" x="5.08" y="-2.54" length="short" rot="R180"/>
-<pin name="3" x="5.08" y="0" length="short" rot="R180"/>
-<pin name="4" x="5.08" y="2.54" length="short" rot="R180"/>
+<symbol name="1X04-PJ">
+<wire x1="-5.08" y1="0" x2="-5.08" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="1.27" width="0.4064" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="1.27" width="0.4064" layer="94"/>
+<wire x1="-5.715" y1="0" x2="-2.54" y2="0" width="0.4064" layer="94"/>
+<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.4064" layer="94"/>
+<wire x1="0" y1="0" x2="3.175" y2="0" width="0.4064" layer="94"/>
+<wire x1="3.175" y1="0" x2="3.175" y2="0.635" width="0.4064" layer="94"/>
+<wire x1="3.175" y1="0.635" x2="-5.715" y2="0.635" width="0.4064" layer="94"/>
+<wire x1="-5.715" y1="0.635" x2="-5.715" y2="0" width="0.4064" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.27" width="0.4064" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="1.27" width="0.1524" layer="94"/>
+<text x="-6.35" y="0" size="1.524" layer="95" ratio="15" rot="R90">&gt;NAME</text>
+<pin name="1" x="-5.08" y="-2.54" visible="pin" length="short" direction="pas" rot="R90"/>
+<pin name="2" x="-2.54" y="-2.54" visible="pin" length="short" direction="pas" rot="R90"/>
+<pin name="3" x="0" y="-2.54" visible="pin" length="short" direction="pas" rot="R90"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="1.27" width="0.4064" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="1.27" width="0.1524" layer="94"/>
+<pin name="4" x="2.54" y="-2.54" visible="pin" length="short" direction="pas" rot="R90"/>
 </symbol>
 <symbol name="USB">
 <wire x1="1.27" y1="5.08" x2="-3.81" y2="5.08" width="0.254" layer="94"/>
@@ -481,22 +478,11 @@ Standard 8.5x11 US Letter frame</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="1X04" prefix="J">
+<deviceset name="1X04-PJ" prefix="JP">
 <gates>
-<gate name="G$1" symbol="1X04" x="0" y="0"/>
+<gate name="G$1" symbol="1X04-PJ" x="0" y="0"/>
 </gates>
 <devices>
-<device name="LONG" package="1X04-LONG">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
 <device name="" package="1X04">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
@@ -8284,12 +8270,12 @@ Standard 8.5x11 US Letter frame</description>
 <attribute name="AUTHOR" value="A.I. HARDWARE SITH LORDS"/>
 <attribute name="REV" value="1.1"/>
 </part>
-<part name="JP1" library="Ai_Connectors" deviceset="1X06" device="LONG"/>
-<part name="JP2" library="Ai_Connectors" deviceset="1X04" device=""/>
+<part name="J1" library="Ai_Connectors" deviceset="1X06" device="LONG"/>
+<part name="JP1" library="Ai_Connectors" deviceset="1X04-PJ" device=""/>
 <part name="C1" library="Ai_Passives" deviceset="CAP" device="0603" value="0.1uF"/>
 <part name="C2" library="Ai_Passives" deviceset="CAP" device="0603" value="0.1uF"/>
-<part name="R1" library="Ai_Passives" deviceset="RES" device="0603" value="1K"/>
-<part name="R2" library="Ai_Passives" deviceset="RES" device="0603" value="125"/>
+<part name="R1" library="Ai_Passives" deviceset="RES" device="0603" value="300"/>
+<part name="R2" library="Ai_Passives" deviceset="RES" device="0603" value="1K"/>
 <part name="GND1" library="Ai_Power" deviceset="GND" device=""/>
 <part name="GND2" library="Ai_Power" deviceset="GND" device=""/>
 <part name="TXLED" library="Ai_LED" deviceset="LED" device="0603" value="YELLOW"/>
@@ -8321,8 +8307,8 @@ Standard 8.5x11 US Letter frame</description>
 <attribute name="AUTHOR" x="167.64" y="10.16" size="2.54" layer="94"/>
 <attribute name="REV" x="238.76" y="10.16" size="2.54" layer="94"/>
 </instance>
-<instance part="JP1" gate="M06X1" x="105.41" y="69.85" rot="R180"/>
-<instance part="JP2" gate="G$1" x="165.1" y="73.66" rot="R180"/>
+<instance part="J1" gate="M06X1" x="105.41" y="69.85" rot="R180"/>
+<instance part="JP1" gate="G$1" x="162.56" y="73.66" rot="R270"/>
 <instance part="C1" gate="G$1" x="88.9" y="115.57"/>
 <instance part="C2" gate="G$1" x="109.22" y="115.57"/>
 <instance part="R1" gate="G$1" x="163.83" y="133.35" rot="R90"/>
@@ -8395,7 +8381,7 @@ Standard 8.5x11 US Letter frame</description>
 <pinref part="ON" gate="G$1" pin="C"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="M06X1" pin="1"/>
+<pinref part="J1" gate="M06X1" pin="1"/>
 <wire x1="100.33" y1="77.47" x2="95.25" y2="77.47" width="0.1524" layer="91"/>
 <label x="95.25" y="77.47" size="1.27" layer="95" ratio="15" rot="R180" xref="yes"/>
 </segment>
@@ -8416,7 +8402,7 @@ Standard 8.5x11 US Letter frame</description>
 </net>
 <net name="5V" class="0">
 <segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
+<pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="160.02" y1="78.74" x2="157.48" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="U$6" gate="G$1" pin="5V"/>
 <wire x1="157.48" y1="78.74" x2="157.48" y2="80.01" width="0.1524" layer="91"/>
@@ -8448,7 +8434,7 @@ Standard 8.5x11 US Letter frame</description>
 <net name="3V3" class="0">
 <segment>
 <wire x1="160.02" y1="71.12" x2="153.67" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="G$1" pin="4"/>
+<pinref part="JP1" gate="G$1" pin="4"/>
 <pinref part="U$5" gate="G$1" pin="3V3"/>
 <wire x1="153.67" y1="71.12" x2="153.67" y2="80.01" width="0.1524" layer="91"/>
 </segment>
@@ -8490,7 +8476,7 @@ Standard 8.5x11 US Letter frame</description>
 <label x="149.86" y="133.35" size="1.27" layer="95" ratio="15" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="M06X1" pin="4"/>
+<pinref part="J1" gate="M06X1" pin="4"/>
 <wire x1="100.33" y1="69.85" x2="95.25" y2="69.85" width="0.1524" layer="91"/>
 <label x="95.25" y="69.85" size="1.27" layer="95" ratio="15" rot="R180" xref="yes"/>
 </segment>
@@ -8502,7 +8488,7 @@ Standard 8.5x11 US Letter frame</description>
 <label x="149.86" y="125.73" size="1.27" layer="95" ratio="15" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="M06X1" pin="2"/>
+<pinref part="J1" gate="M06X1" pin="2"/>
 <wire x1="100.33" y1="74.93" x2="95.25" y2="74.93" width="0.1524" layer="91"/>
 <label x="95.25" y="74.93" size="1.27" layer="95" ratio="15" rot="R180" xref="yes"/>
 </segment>
@@ -8514,7 +8500,7 @@ Standard 8.5x11 US Letter frame</description>
 <label x="149.86" y="130.81" size="1.27" layer="95" ratio="15" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="M06X1" pin="5"/>
+<pinref part="J1" gate="M06X1" pin="5"/>
 <wire x1="100.33" y1="67.31" x2="95.25" y2="67.31" width="0.1524" layer="91"/>
 <label x="95.25" y="67.31" size="1.27" layer="95" ratio="15" rot="R180" xref="yes"/>
 </segment>
@@ -8526,7 +8512,7 @@ Standard 8.5x11 US Letter frame</description>
 <label x="149.86" y="120.65" size="1.27" layer="95" ratio="15" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="M06X1" pin="6"/>
+<pinref part="J1" gate="M06X1" pin="6"/>
 <wire x1="100.33" y1="64.77" x2="95.25" y2="64.77" width="0.1524" layer="91"/>
 <label x="95.25" y="64.77" size="1.27" layer="95" ratio="15" rot="R180" xref="yes"/>
 </segment>
@@ -8549,15 +8535,15 @@ Standard 8.5x11 US Letter frame</description>
 </net>
 <net name="PWR" class="0">
 <segment>
-<pinref part="JP1" gate="M06X1" pin="3"/>
+<pinref part="J1" gate="M06X1" pin="3"/>
 <wire x1="100.33" y1="72.39" x2="97.79" y2="72.39" width="0.1524" layer="91"/>
 <wire x1="97.79" y1="72.39" x2="97.79" y2="80.01" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="PWR"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="3"/>
+<pinref part="JP1" gate="G$1" pin="3"/>
 <wire x1="148.59" y1="73.66" x2="160.02" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="G$1" pin="2"/>
+<pinref part="JP1" gate="G$1" pin="2"/>
 <wire x1="148.59" y1="76.2" x2="160.02" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="148.59" y1="73.66" x2="148.59" y2="74.93" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
