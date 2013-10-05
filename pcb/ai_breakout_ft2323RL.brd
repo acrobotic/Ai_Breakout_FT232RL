@@ -127,7 +127,7 @@
 <wire x1="25.4" y1="0" x2="25.4" y2="16.256" width="0.127" layer="20"/>
 <wire x1="25.4" y1="16.256" x2="0" y2="16.256" width="0.127" layer="20"/>
 <wire x1="0" y1="16.256" x2="0" y2="0" width="0.127" layer="20"/>
-<text x="1.27" y="5.969" size="0.889" layer="21" font="vector" ratio="15" rot="R90">VCC</text>
+<text x="1.27" y="5.969" size="0.889" layer="21" font="vector" ratio="15" rot="R90">PWR</text>
 <text x="1.27" y="13.6525" size="0.889" layer="21" font="vector" ratio="15" rot="R90">DTR</text>
 <text x="1.3335" y="11.303" size="0.889" layer="21" font="vector" ratio="15" rot="R90">RXI</text>
 <text x="1.27" y="8.636" size="0.889" layer="21" font="vector" ratio="15" rot="R90">TXO</text>
