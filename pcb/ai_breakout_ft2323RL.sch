@@ -8260,9 +8260,9 @@ Standard 8.5x11 US Letter frame</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.2032" drill="0">
+<class number="0" name="default" width="0.254" drill="0">
 </class>
-<class number="1" name="power" width="0.254" drill="0">
+<class number="1" name="power" width="0.3556" drill="0">
 </class>
 </classes>
 <parts>
@@ -8400,7 +8400,7 @@ Standard 8.5x11 US Letter frame</description>
 <pinref part="IC1" gate="G$1" pin="USBDP"/>
 </segment>
 </net>
-<net name="5V" class="0">
+<net name="5V" class="1">
 <segment>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="160.02" y1="78.74" x2="157.48" y2="78.74" width="0.1524" layer="91"/>
@@ -8431,7 +8431,7 @@ Standard 8.5x11 US Letter frame</description>
 <pinref part="U$9" gate="G$1" pin="5V"/>
 </segment>
 </net>
-<net name="3V3" class="0">
+<net name="3V3" class="1">
 <segment>
 <wire x1="160.02" y1="71.12" x2="153.67" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="4"/>
@@ -8533,7 +8533,7 @@ Standard 8.5x11 US Letter frame</description>
 <wire x1="167.64" y1="105.41" x2="147.32" y2="105.41" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="PWR" class="0">
+<net name="PWR" class="1">
 <segment>
 <pinref part="J1" gate="M06X1" pin="3"/>
 <wire x1="100.33" y1="72.39" x2="97.79" y2="72.39" width="0.1524" layer="91"/>
