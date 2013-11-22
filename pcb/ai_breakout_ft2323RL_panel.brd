@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -76,8 +76,8 @@
 <layer number="122" name="_bsilk" color="14" fill="1" visible="no" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="124" name="bTestmark" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="125" name="_tNames" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="126" name="_bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="125" name="_tNames" color="14" fill="1" visible="no" active="yes"/>
+<layer number="126" name="_bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
@@ -123,9 +123,8 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="25.527" x2="0" y2="0" width="0.127" layer="20"/>
 <wire x1="0" y1="0" x2="16.256" y2="0" width="0.127" layer="20"/>
-<wire x1="16.256" y1="0" x2="16.256" y2="25.527" width="0.127" layer="20"/>
+<wire x1="16.256" y1="0" x2="16.256" y2="25.527" width="0.127" layer="21"/>
 <wire x1="16.256" y1="25.527" x2="0" y2="25.527" width="0.127" layer="20"/>
 <text x="5.5372" y="24.257" size="0.889" layer="21" font="vector" ratio="15">TXO</text>
 <text x="13.7795" y="24.257" size="0.889" layer="21" font="vector" ratio="15">GND</text>
@@ -3901,9 +3900,9 @@
 <text x="4.191" y="15.24" size="0.762" layer="125" ratio="15" rot="R90">R2</text>
 <text x="15.18399375" y="8.271409375" size="0.762" layer="125" ratio="15" rot="R270">RXLED</text>
 <text x="15.886403125" y="13.953590625" size="0.762" layer="125" ratio="15" rot="R90">TXLED</text>
-<wire x1="16.8" y1="25.527" x2="16.8" y2="0" width="0.127" layer="20"/>
+<wire x1="16.8" y1="25.527" x2="16.8" y2="0" width="0.127" layer="21"/>
 <wire x1="16.8" y1="0" x2="33.056" y2="0" width="0.127" layer="20"/>
-<wire x1="33.056" y1="0" x2="33.056" y2="25.527" width="0.127" layer="20"/>
+<wire x1="33.056" y1="0" x2="33.056" y2="25.527" width="0.127" layer="21"/>
 <wire x1="33.056" y1="25.527" x2="16.8" y2="25.527" width="0.127" layer="20"/>
 <text x="22.3372" y="24.257" size="0.889" layer="21" font="vector" ratio="15">TXO</text>
 <text x="30.5795" y="24.257" size="0.889" layer="21" font="vector" ratio="15">GND</text>
@@ -3965,7 +3964,7 @@
 <text x="20.991" y="15.24" size="0.762" layer="125" ratio="15" rot="R90">R2</text>
 <text x="31.98399375" y="8.271409375" size="0.762" layer="125" ratio="15" rot="R270">RXLED</text>
 <text x="32.686403125" y="13.953590625" size="0.762" layer="125" ratio="15" rot="R90">TXLED</text>
-<wire x1="33.6" y1="25.527" x2="33.6" y2="0" width="0.127" layer="20"/>
+<wire x1="33.6" y1="25.527" x2="33.6" y2="0" width="0.127" layer="21"/>
 <wire x1="33.6" y1="0" x2="49.856" y2="0" width="0.127" layer="20"/>
 <wire x1="49.856" y1="0" x2="49.856" y2="25.527" width="0.127" layer="20"/>
 <wire x1="49.856" y1="25.527" x2="33.6" y2="25.527" width="0.127" layer="20"/>
@@ -4031,6 +4030,9 @@
 <text x="49.486403125" y="13.953590625" size="0.762" layer="125" ratio="15" rot="R90">TXLED</text>
 <wire x1="16.528" y1="0" x2="16.528" y2="25.5" width="0.2" layer="125"/>
 <wire x1="33.328" y1="0" x2="33.328" y2="25.5" width="0.2" layer="125"/>
+<wire x1="16.256" y1="0" x2="49.911" y2="0" width="0.127" layer="20"/>
+<wire x1="49.911" y1="25.527" x2="16.256" y2="25.527" width="0.127" layer="20"/>
+<wire x1="0" y1="25.527" x2="0" y2="0" width="0.127" layer="20"/>
 </plain>
 <libraries>
 <library name="Ai_Connectors">
