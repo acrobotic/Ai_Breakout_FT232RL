@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -58,6 +58,7 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="99" name="SpiceOrder" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
 <layer number="101" name="Patch_Top" color="12" fill="4" visible="no" active="yes"/>
 <layer number="102" name="Vscore" color="7" fill="1" visible="no" active="yes"/>
@@ -334,10 +335,10 @@ Standard 8.5x11 US Letter frame</description>
 <text x="-2.54" y="-4.445" size="1.27" layer="25" font="vector" ratio="15">&gt;NAME</text>
 <smd name="M5" x="-1.15" y="0" dx="1.8" dy="1.8" layer="1" rot="R90"/>
 <smd name="M6" x="1.15" y="0" dx="1.8" dy="1.8" layer="1" rot="R90"/>
-<pad name="MT1" x="-2.425" y="2.8" drill="0.7"/>
-<pad name="MT2" x="2.425" y="2.8" drill="0.7"/>
-<pad name="MT3" x="-3.61" y="0" drill="1.5" diameter="2.3" rot="R180"/>
-<pad name="MT4" x="3.61" y="0" drill="1.5" diameter="2.3" rot="R90"/>
+<pad name="MT1" x="-2.425" y="2.8" drill="0.6" diameter="1.2"/>
+<pad name="MT2" x="2.425" y="2.8" drill="0.6" diameter="1.2"/>
+<pad name="MT3" x="-3.61" y="0" drill="1.1" diameter="2" rot="R180"/>
+<pad name="MT4" x="3.61" y="0" drill="1.1" diameter="2" rot="R90"/>
 </package>
 <package name="1X06">
 <wire x1="0.635" y1="1.27" x2="1.905" y2="1.27" width="0.2032" layer="21"/>
@@ -385,6 +386,13 @@ Standard 8.5x11 US Letter frame</description>
 <wire x1="3.175" y1="-1.27" x2="2.54" y2="-0.635" width="0.2032" layer="21"/>
 <wire x1="5.715" y1="-1.27" x2="5.08" y2="-0.635" width="0.2032" layer="21"/>
 <wire x1="7.62" y1="0.635" x2="7.62" y2="-0.635" width="0.2032" layer="21"/>
+</package>
+<package name="1X04-NOSILK">
+<pad name="1" x="-3.81" y="0" drill="1.016" diameter="1.8796" rot="R90" first="yes"/>
+<pad name="2" x="-1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="3" x="1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="4" x="3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<text x="-5.08" y="1.524" size="1.27" layer="25" font="vector" ratio="15">&gt;NAME</text>
 </package>
 <package name="1X04">
 <wire x1="3.175" y1="1.27" x2="4.445" y2="1.27" width="0.2032" layer="21"/>
@@ -459,6 +467,30 @@ Standard 8.5x11 US Letter frame</description>
 <smd name="MT3" x="-1.27" y="0" dx="1.9" dy="1.9" layer="1" rot="R90"/>
 <smd name="MT4" x="1.27" y="0" dx="1.9" dy="1.9" layer="1" rot="R90"/>
 </package>
+<package name="1X04-LONG">
+<wire x1="-5.08" y1="0.635" x2="-5.08" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="5.08" y1="0.635" x2="5.08" y2="-0.635" width="0.2032" layer="21"/>
+<pad name="1" x="-3.81" y="0" drill="1.1176" diameter="1.8796" shape="long" rot="R90"/>
+<pad name="2" x="-1.27" y="0" drill="1.1176" diameter="1.8796" shape="long" rot="R90"/>
+<pad name="3" x="1.27" y="0" drill="1.1176" diameter="1.8796" shape="long" rot="R90"/>
+<pad name="4" x="3.81" y="0" drill="1.1176" diameter="1.8796" shape="long" rot="R90"/>
+<text x="-5.08" y="2.54" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<rectangle x1="3.556" y1="-0.254" x2="4.064" y2="0.254" layer="51"/>
+<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
+<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
+<rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
+</package>
+<package name="1X04-NOFIRST">
+<pad name="1" x="-3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="2" x="-1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="3" x="1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="4" x="3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<text x="-5.08" y="1.524" size="1.27" layer="25" font="vector" ratio="15">&gt;NAME</text>
+<wire x1="-5.08" y1="1.27" x2="5.08" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="-5.08" y1="1.27" x2="-5.08" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="5.08" y1="-1.27" x2="-5.08" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="5.08" y1="1.27" x2="5.08" y2="-1.27" width="0.2032" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="1X06">
@@ -474,26 +506,16 @@ Standard 8.5x11 US Letter frame</description>
 <pin name="5" x="5.08" y="2.54" visible="pin" length="short" rot="R180"/>
 <pin name="6" x="5.08" y="5.08" visible="pin" length="short" rot="R180"/>
 </symbol>
-<symbol name="1X04-PJ">
-<wire x1="-5.08" y1="0" x2="-5.08" y2="1.27" width="0.1524" layer="94"/>
-<wire x1="-5.08" y1="2.54" x2="-5.08" y2="1.27" width="0.4064" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-2.54" y2="1.27" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="2.54" x2="-2.54" y2="1.27" width="0.4064" layer="94"/>
-<wire x1="-5.715" y1="0" x2="-2.54" y2="0" width="0.4064" layer="94"/>
-<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.4064" layer="94"/>
-<wire x1="0" y1="0" x2="3.175" y2="0" width="0.4064" layer="94"/>
-<wire x1="3.175" y1="0" x2="3.175" y2="0.635" width="0.4064" layer="94"/>
-<wire x1="3.175" y1="0.635" x2="-5.715" y2="0.635" width="0.4064" layer="94"/>
-<wire x1="-5.715" y1="0.635" x2="-5.715" y2="0" width="0.4064" layer="94"/>
-<wire x1="0" y1="2.54" x2="0" y2="1.27" width="0.4064" layer="94"/>
-<wire x1="0" y1="0" x2="0" y2="1.27" width="0.1524" layer="94"/>
-<text x="-6.35" y="0" size="1.27" layer="95" font="vector" ratio="15" rot="R90">&gt;NAME</text>
-<pin name="1" x="-5.08" y="-2.54" visible="pin" length="short" direction="pas" rot="R90"/>
-<pin name="2" x="-2.54" y="-2.54" visible="pin" length="short" direction="pas" rot="R90"/>
-<pin name="3" x="0" y="-2.54" visible="pin" length="short" direction="pas" rot="R90"/>
-<wire x1="2.54" y1="2.54" x2="2.54" y2="1.27" width="0.4064" layer="94"/>
-<wire x1="2.54" y1="0" x2="2.54" y2="1.27" width="0.1524" layer="94"/>
-<pin name="4" x="2.54" y="-2.54" visible="pin" length="short" direction="pas" rot="R90"/>
+<symbol name="1X04">
+<wire x1="2.54" y1="-7.62" x2="-2.54" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="2.54" y1="-7.62" x2="2.54" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="2.54" y2="5.08" width="0.4064" layer="94"/>
+<text x="-2.54" y="5.715" size="1.27" layer="95" font="vector" ratio="15">&gt;NAME</text>
+<pin name="1" x="5.08" y="-5.08" length="short" rot="R180"/>
+<pin name="2" x="5.08" y="-2.54" length="short" rot="R180"/>
+<pin name="3" x="5.08" y="0" length="short" rot="R180"/>
+<pin name="4" x="5.08" y="2.54" length="short" rot="R180"/>
 </symbol>
 <symbol name="USB">
 <wire x1="1.27" y1="5.08" x2="-3.81" y2="5.08" width="0.254" layer="94"/>
@@ -540,12 +562,45 @@ Standard 8.5x11 US Letter frame</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="1X04-PJ" prefix="JP">
+<deviceset name="1X04" prefix="J">
 <gates>
-<gate name="G$1" symbol="1X04-PJ" x="0" y="0"/>
+<gate name="G$1" symbol="1X04" x="0" y="0"/>
 </gates>
 <devices>
+<device name="LONG" package="1X04-LONG">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 <device name="" package="1X04">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="NOSILK" package="1X04-NOSILK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="NOFIRST" package="1X04-NOFIRST">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -599,8 +654,8 @@ Standard 8.5x11 US Letter frame</description>
 <wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
 <wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
 <wire x1="0" y1="0.0305" x2="0" y2="-0.0305" width="0.5588" layer="21"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="1" x="-0.9" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="2" x="0.9" y="0" dx="1.1" dy="1" layer="1"/>
 <text x="-1.905" y="0.635" size="1.27" layer="25" font="vector" ratio="15">&gt;NAME</text>
 <rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
@@ -612,9 +667,9 @@ Standard 8.5x11 US Letter frame</description>
 <wire x1="-1.524" y1="-0.635" x2="-1.524" y2="0.635" width="0.0508" layer="39"/>
 <wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
 <wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="-1.905" y="0.635" size="1.27" layer="25" font="vector" ratio="15">&gt;NAME</text>
+<smd name="1" x="-0.9" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="2" x="0.9" y="0" dx="1.1" dy="1" layer="1"/>
+<text x="-1.778" y="0.762" size="1.27" layer="25" font="vector" ratio="15">&gt;NAME</text>
 <rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 <rectangle x1="-0.2286" y1="-0.381" x2="0.2286" y2="0.381" layer="21"/>
@@ -702,6 +757,26 @@ chip</description>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 <rectangle x1="-0.2032" y1="-0.3556" x2="0.2032" y2="0.3556" layer="21"/>
 </package>
+<package name="CAP-0805">
+<wire x1="-0.5" y1="0.6" x2="0.5" y2="0.6" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="-0.6" x2="0.5" y2="-0.6" width="0.1524" layer="21"/>
+<smd name="1" x="-0.95" y="0" dx="1" dy="1.4" layer="1"/>
+<smd name="2" x="0.95" y="0" dx="1" dy="1.4" layer="1"/>
+<text x="-1.27" y="0.762" size="1.27" layer="25" font="vector" ratio="15">&gt;NAME</text>
+<rectangle x1="-1" y1="-0.6762" x2="-0.45" y2="0.6762" layer="51"/>
+<rectangle x1="0.45" y1="-0.6762" x2="1" y2="0.6762" layer="51"/>
+<wire x1="0" y1="-0.0305" x2="0" y2="0.0305" width="0.5588" layer="21"/>
+</package>
+<package name="RES-0805">
+<smd name="1" x="-0.95" y="0" dx="1" dy="1.4" layer="1"/>
+<smd name="2" x="0.95" y="0" dx="1" dy="1.4" layer="1"/>
+<text x="-1.27" y="0.762" size="1.27" layer="25" font="vector" ratio="15">&gt;NAME</text>
+<rectangle x1="-0.2286" y1="-0.381" x2="0.2286" y2="0.381" layer="21"/>
+<wire x1="-0.5" y1="0.6" x2="0.5" y2="0.6" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="-0.6" x2="0.5" y2="-0.6" width="0.1524" layer="21"/>
+<rectangle x1="-1" y1="-0.6762" x2="-0.45" y2="0.6762" layer="51"/>
+<rectangle x1="0.45" y1="-0.6762" x2="1" y2="0.6762" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="CAP">
@@ -772,9 +847,19 @@ chip</description>
 <technology name=""/>
 </technologies>
 </device>
+<device name="0805" package="CAP-0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="RES" prefix="R" uservalue="yes">
+<description>Part # blah Digikey</description>
 <gates>
 <gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
 </gates>
@@ -806,6 +891,15 @@ chip</description>
 <technology name=""/>
 </technologies>
 </device>
+<device name="0805" package="RES-0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -821,6 +915,23 @@ chip</description>
 <smd name="C" x="0" y="0.75" dx="0.8" dy="0.8" layer="1"/>
 <smd name="A" x="0" y="-0.75" dx="0.8" dy="0.8" layer="1"/>
 <text x="-0.635" y="-0.635" size="1.27" layer="25" font="vector" ratio="15" rot="R90">&gt;NAME</text>
+</package>
+<package name="LED-0805">
+<wire x1="-0.35" y1="0.925" x2="0.35" y2="0.925" width="0.1016" layer="51" curve="162.394521"/>
+<wire x1="-0.35" y1="-0.925" x2="0.35" y2="-0.925" width="0.1016" layer="51" curve="-162.394521"/>
+<smd name="C" x="0" y="1.05" dx="1.2" dy="1.2" layer="1"/>
+<smd name="A" x="0" y="-1.05" dx="1.2" dy="1.2" layer="1"/>
+<text x="-0.87" y="-1.27" size="1.27" layer="25" font="vector" ratio="15" rot="R90">&gt;NAME</text>
+<wire x1="-0.35" y1="0.95" x2="-0.575" y2="0.95" width="0.1" layer="51"/>
+<wire x1="-0.575" y1="0.95" x2="-0.575" y2="-0.95" width="0.1" layer="51"/>
+<wire x1="-0.575" y1="-0.95" x2="-0.35" y2="-0.95" width="0.1" layer="51"/>
+<wire x1="0.35" y1="0.95" x2="0.575" y2="0.95" width="0.1" layer="51"/>
+<wire x1="0.575" y1="0.95" x2="0.575" y2="-0.95" width="0.1" layer="51"/>
+<wire x1="0.575" y1="-0.95" x2="0.35" y2="-0.95" width="0.1" layer="51"/>
+<wire x1="0.46" y1="0.07" x2="0" y2="0.07" width="0.2032" layer="21"/>
+<wire x1="-0.46" y1="0.07" x2="0" y2="0.07" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.07" x2="0.2338" y2="-0.24" width="0.2032" layer="21"/>
+<wire x1="-0.0254" y1="0.0546" x2="-0.2184" y2="-0.24" width="0.2032" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -847,7 +958,7 @@ chip</description>
 <vertex x="-2.413" y="-2.921"/>
 </polygon>
 <wire x1="0" y1="0" x2="-1.27" y2="0" width="0.254" layer="94"/>
-<text x="1.905" y="-5.08" size="1.524" layer="96" font="vector" ratio="15" rot="R90">&gt;VALUE</text>
+<text x="1.905" y="-7.62" size="1.524" layer="96" font="vector" ratio="15" rot="R90">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -857,6 +968,15 @@ chip</description>
 </gates>
 <devices>
 <device name="0603" package="LED-0603">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0805" package="LED-0805">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -15440,8 +15560,8 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <wire x1="12.7" y1="20.32" x2="12.7" y2="-20.32" width="0.381" layer="94"/>
 <wire x1="12.7" y1="-20.32" x2="-12.7" y2="-20.32" width="0.381" layer="94"/>
 <wire x1="-12.7" y1="-20.32" x2="-12.7" y2="20.32" width="0.381" layer="94"/>
-<text x="-12.7" y="20.32" size="1.524" layer="96" font="vector" ratio="15">FT232RL</text>
-<text x="-12.7" y="-22.86" size="1.524" layer="95" font="vector" ratio="15">&gt;NAME</text>
+<text x="-12.7" y="20.955" size="1.524" layer="96" font="vector" ratio="15">FT232RL</text>
+<text x="-12.7" y="-22.225" size="1.524" layer="95" font="vector" ratio="15">&gt;NAME</text>
 <pin name="!RESET" x="-15.24" y="-5.08" length="short" direction="nc"/>
 <pin name="OSCI" x="-15.24" y="0" length="short" direction="nc"/>
 <pin name="OSCO" x="-15.24" y="-2.54" length="short" direction="out"/>
@@ -15530,7 +15650,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <attribute name="REV" value="1.3"/>
 </part>
 <part name="J1" library="Ai_Connectors" deviceset="1X06" device="LONG"/>
-<part name="JP1" library="Ai_Connectors" deviceset="1X04-PJ" device=""/>
+<part name="JP1" library="Ai_Connectors" deviceset="1X04" device="NOSILK"/>
 <part name="C1" library="Ai_Passives" deviceset="CAP" device="0603" value="0.1uF"/>
 <part name="C2" library="Ai_Passives" deviceset="CAP" device="0603" value="0.1uF"/>
 <part name="R1" library="Ai_Passives" deviceset="RES" device="0603" value="300"/>
@@ -15562,7 +15682,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="147.32" y="0"/>
 <instance part="J1" gate="M06X1" x="105.41" y="69.85" rot="R180"/>
-<instance part="JP1" gate="G$1" x="160.02" y="73.66" rot="R270"/>
+<instance part="JP1" gate="G$1" x="162.56" y="73.66" rot="R180"/>
 <instance part="C1" gate="G$1" x="88.9" y="115.57"/>
 <instance part="C2" gate="G$1" x="109.22" y="115.57"/>
 <instance part="R1" gate="G$1" x="167.64" y="133.35" rot="R90"/>
